@@ -1,0 +1,10 @@
+name: main
+on: [push]
+jobs:
+  Test:
+    runs-on: windows-latest
+    steps:
+      - name: haxelib
+        run: |
+          ./Main.exe setup ${{ github.workspace }}\\haxe\\lib
+          ./Main install systools
