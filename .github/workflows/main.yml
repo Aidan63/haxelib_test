@@ -7,6 +7,6 @@ jobs:
       - name: haxelib
         shell: cmd
         run: |
-          dir
-          ${{ github.workspace }}\Main.exe setup ${{ github.workspace }}\haxe\lib
-          ${{ github.workspace }}\Main.exe install systools
+          dir ..
+          ${{ github.workspace }}\..\Main.exe setup ${{ github.workspace }}\haxe\lib
+          ${{ github.workspace }}\..\Main.exe install systools
