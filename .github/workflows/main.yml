@@ -4,9 +4,13 @@ jobs:
   Test:
     runs-on: windows-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
       - name: haxelib
         shell: cmd
         run: |
-          dir ..
-          ${{ github.workspace }}\..\Main.exe setup ${{ github.workspace }}\haxe\lib
-          ${{ github.workspace }}\..\Main.exe install systools
+          .\Main.exe setup ${{ github.workspace }}\haxe\lib
+          .\Main.exe install systools
