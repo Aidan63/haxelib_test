@@ -5,6 +5,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: haxelib
+        shell: cmd
         run: |
-          ./Main.exe setup ${{ github.workspace }}\\haxe\\lib
+          ./Main.exe setup ${{ github.workspace }}\haxe\lib
           ./Main install systools
